@@ -1,0 +1,106 @@
+body {
+    font-family: Helvetica,Arial,sans-serif;
+    text-shadow: 0 1px 0 #fff;
+    height: 95vh;
+    overflow-y: hidden;
+    background: #fefefe url(paper.jpeg);
+
+}
+
+#left_block {
+    float: left;
+    width: 33%;
+    height: 90vh;
+    border-right: 1px solid #ccc;
+}
+#search_label {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    height: 35px ;
+}
+
+#search {
+    width: 98%;
+    height: 25px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+    margin: 0 0 .5em;
+}
+ul {
+    margin: .5em 0;
+    padding: 0;
+}
+
+#list {
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+#list li {
+    padding: 7px;
+    border-bottom: 1px solid #ccc;
+    font-weight: 600;
+    color: #222;
+
+    background: #eee linear-gradient(#fff, #f1f1f1);
+
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#list li:hover {
+    background: #ddd;
+}
+
+#list li:active {
+    background: #bbb;
+}
+
+#list li.selected {
+    background: #bbb linear-gradient(#ccc, #bbb);
+}
+
+#right_block {
+    float: left;
+    width: 66%;
+    height: 90vh;
+}
+
+#control_panel {
+    height: 35px;
+    margin: 0;
+}
+
+#create {
+    margin-left: 0.5em;
+}
+
+textarea {
+    display:none;
+    width: 100%;
+    border: 0;
+}
+
+
+#name {
+    display:none;
+    width: 100%;
+    padding: 0.5em;
+    border: 0;
+    font-weight: 600;
+    margin: 0 .5em 1em;
+}
+
+#content {
+    margin: .5em;
+    padding: 0.5em 0.5em 20px;
+    height: 80vh;
+}
+
+
+
+
