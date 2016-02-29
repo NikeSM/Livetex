@@ -2,7 +2,6 @@ window.Model = (function(){
 
 
     function Note(title, content, id) {
-        console.log(id);
         var counter = localStorage.getItem('counter') || 1;
         this.id = id || counter++;
         localStorage.setItem('counter', counter);
@@ -83,7 +82,8 @@ window.Model = (function(){
     };
 
     List.prototype.getNoteById = function(id) {
-        for (var i = 0; i < this.items.length; i++) {
+        var i;
+        for (i = 0; i < this.items.length; i++) {
             if (this.items[i].id == id) {
                 return this.items[i];
             }
@@ -93,7 +93,8 @@ window.Model = (function(){
     };
 
     List.prototype.refresh = function(callback, args) {
-        for(var i = 0; i < this.items.length; i++) {
+        var i;
+        for(i = 0; i < this.items.length; i++) {
             callback.call(this.items[i], args)
         }
     };

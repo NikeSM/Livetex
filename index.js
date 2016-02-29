@@ -1,13 +1,11 @@
 $(document).ready(function () {
-    var $name = $('#name');
-    var $content = $('#content');
-    var $search = $('#search');
-    var $create = $('#create');
-    var $left_block = $('#left_block');
+    var $name = $('#name'),
+        $content = $('#content'),
+        $search = $('#search'),
+        $create = $('#create'),
+        $left_block = $('#left_block'),
+        noteList = new Model.List($('#list'));
 
-
-
-    var noteList = new Model.List($('#list'));
     noteList.refresh(init, noteList);
     noteList.refresh(filter, noteList.filter);
     noteList.setCurrentItem(noteList.currentItem, changeSelectNote);
@@ -33,10 +31,10 @@ $(document).ready(function () {
     });
 
     $left_block.click(function(e){
-        var target = $(e.target);
+        var target = $(e.target),
+            note;
         if (target.is("li")) {
-
-            var note = noteList.getNoteById(target.val());
+            note = noteList.getNoteById(target.val());
             noteList.setCurrentItem(note, changeSelectNote);
 
         }
@@ -48,10 +46,10 @@ $(document).ready(function () {
     });
 
     $(window).bind('storage', function (e) {
-        var key = e.originalEvent.key;
-        var value = e.originalEvent.newValue;
-        var id = +key;
-        var note;
+        var key = e.originalEvent.key,
+            value = e.originalEvent.newValue,
+            id = +key,
+            note;
         if (id) {
             note = noteList.getNoteById(id);
             if (!note) {
@@ -72,8 +70,6 @@ $(document).ready(function () {
             noteList.refresh(filter, noteList.filter)
         }
 
-        console.log("key", e.originalEvent.key);
-        console.log("value", e.originalEvent.newValue);
     });
 
 
