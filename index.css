@@ -21,18 +21,20 @@ body {
 }
 
 #search {
-    width: 98%;
+    width: 97%;
     height: 25px;
     position: relative;
     display: block;
     text-decoration: none;
     border-radius: .3em;
     transition: all .3s ease-out;
-    margin: 0 0 .5em;
+
+    font-weight: 600;
+    margin: 0 .5em 1em;
 }
 ul {
-    margin: .5em 0;
-    padding: 0;
+    margin: .5em;
+    padding: 0.5em 0.5em 20px;
 }
 
 #list {
